@@ -1,0 +1,291 @@
+html {
+    scroll-behavior: smooth;
+}
+.SideBar {
+    background-color: rgb(230, 63, 34);
+    position: fixed;
+    height: 100vh;
+    z-index: 0;
+    color: white;
+    width: 20%;
+}
+.SideBar .room-info {
+    height: 80%;
+    margin-top: 80px;
+    color: white;
+}
+.SideBar .room-info strong {
+    padding: 10px;
+    font-size: large;
+}
+.SideBar .room-info h5 {
+    padding: 10px;
+}
+.SideBar .user {
+    width: 100%;
+    padding: 10px;
+}
+.SideBar .user:hover {
+    cursor: pointer;
+    background-color: rgb(223, 58, 29);
+}
+.Footer footer {
+    z-index: 1;
+    background-color: #202020;
+    padding: 0px;
+    padding-right: 20px;
+}
+.Footer footer input {
+    padding: 6px;
+    width: 75%;
+    height: 100%;
+    border: 0;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color: white;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+.Footer footer .btn {
+    width: 170px;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-weight: bolder;
+}
+.Footer footer .btn img {
+    width: 30px;
+}
+.Footer footer .btn:focus {
+    outline: none;
+}
+.Footer .chat-bar {
+    width: 75%;
+    color: white;
+}
+.info {
+    width: 20%;
+    padding: 20px;
+    background-color: #F54627;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    display: block;
+}
+.Footer .avatar {
+    width: 15px;
+    margin-top: -5px;
+}
+.Footer .btn img {
+    margin-top: -5px;
+}
+.Header .navbar {
+    background-color: #202020;
+    color: white;
+    border-bottom: 1px solid #F54627;
+}
+.overlay {
+    position: fixed;
+    height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.8);
+    z-index: 2;
+    width: 100%;
+    vertical-align: top;
+    transition: 1s;
+}
+.Join {
+    width: 50%;
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    margin-left: -25%;
+    height: 350px;
+    z-index: 10;
+    margin-top: 20vh;
+    background-color: #F54627;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 660px) {
+    .Join {
+        width: 75%;
+        margin-left: -37.5%;
+    }
+}
+.Join h2 {
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #F54627;
+    color: white;
+    margin-bottom: 20px;
+    height: auto;
+    padding: 20px;
+}
+.Join input, .Join button {
+    display: block;
+    padding: 8px;
+    width: 50%;
+    margin: auto;
+    border: 0;
+    border-radius: 3px;
+    margin-top: 10px;
+    -webkit-appearance: none;
+    max-width: 300px;
+    filter: drop-shadow(0 0 0.2rem rgb(128, 128, 128));
+}
+.Join .text-danger {
+    color: white;
+}
+.SlideHide {
+    animation: slideAway 0.5s ease-in-out;
+    opacity: 0;
+}
+@keyframes slideAway {
+    from {opacity: 1;}
+    to {margin-left: -1000px; opacity: 0;}
+}
+.Chats {
+    width: 80%;
+    background-color: rgb(231, 231, 231);
+    height: 100vh;
+    overflow-y: scroll;
+    margin-left: 20%;
+    padding: 100px 20px;
+    position: relative;
+    transition: 0.5s;
+}
+.Textbox, .TextboxMine {
+    border-radius: 3px;
+    padding: 5px;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    display: block;
+    width: 300px;
+    box-shadow: 2px 2px 3px rgb(167, 167, 167);
+    margin: 40px auto 0 0;
+    animation: grow 0.5s ease-in-out;
+}
+@keyframes grow {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.TextboxMine {
+    margin: 40px 0 0 auto;
+}
+.msg-box {
+    width: 150px;
+    height: auto;
+    padding: 6px 10px;
+    background-color: rgb(62, 101, 231);
+    color: white;
+    z-index: 20;
+    position: absolute;
+    margin-top: 200px;
+    filter: drop-shadow(0 0 0.2rem rgb(51, 51, 51));
+    display: none;
+    animation: slideIn 0.5s;
+}
+@keyframes slideIn {
+    from {margin-left: -200px;}
+    to {margin-left: 0px;}
+}
+.gifs-holder {
+    height: 180px;
+    overflow-x: scroll;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.gifs-holder div { 
+    margin: 10px 12px;
+    height: 90%;
+    display: inline-block;
+    position: relative;
+    z-index: 12;
+}
+.gifs-holder div .gifs {
+    width: auto;
+    height: 100%;
+    z-index: 5;
+}
+.gifs-holder div .gifs:hover {
+    cursor: pointer;
+}
+.gifs-holder div:hover > .gif-overlay {
+    opacity: 1;
+}
+.gifs-holder div:hover > .send {
+    opacity: 1;
+    text-decoration: underline;
+}
+.gifs-holder div .gif-overlay {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 18;
+    position: absolute;
+    margin: 0;
+    margin-left: -100%;
+    opacity: 0;
+}
+.gifs-holder div .send {
+    display: block;
+    margin: auto;
+    margin-top: -30px;
+    margin-left: 10px;
+    font-size: large;
+    color: white;
+    position: absolute;
+    z-index: 20;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.Header .info-responsive {
+    margin-top: 20px;
+}
+.Header .info-responsive strong {
+    padding: 10px;
+    font-size: large;
+}
+.Header .info-responsive .user {
+    width: 100%;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .SideBar {
+        display: none;
+    }
+    .Header .info-responsive {
+        display: block;
+    }
+    .Chats {
+        width: 100%;
+        margin: 0;
+    }
+    .Textbox, .TextboxMine {
+        width: 200px;
+    }
+    .Footer .info {
+        display: none;
+
+    }
+    .Footer .chat-bar {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .Textbox, .TextboxMine {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 500px) {
+
+    .Join input, .Join button {
+        width: 70%;
+    }
+}
